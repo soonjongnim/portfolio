@@ -80,6 +80,10 @@
                     var allText = rawFile.responseText;
                     console.log(allText);
                     var header = document.getElementById("site_header");
+                    console.log('추출된 html1: ' + header.innerHTML)
+                    console.log('추출된 html2: ' + header[0].innerHTML)
+                    console.log('추출된 text1: ' + header.innerText)
+                    console.log('추출된 text2: ' + header[0].innerText)
                     header.appendChild(allText);
                 }
             }
