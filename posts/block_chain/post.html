@@ -68,30 +68,7 @@
     //     return event.keyCode !== 123;
     // });
   </script>
-  <script>
-    function readTextFile(file) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function () {
-            if(rawFile.readyState === 4)
-            {
-                if(rawFile.status === 200 || rawFile.status == 0)
-                {
-                    var allText = rawFile.responseText;
-                    console.log(allText);
-                    var header = document.getElementById("site_header");
-                    console.log('추출된 header: ' + header)
-                    console.log('추출된 html: ' + header[0].innerHTML)
-                    console.log('추출된 text: ' + header[0].innerText)
-                    header.appendChild(allText);
-                }
-            }
-        };
-        rawFile.send();
-    }
-
-    readTextFile("https://soonjongnim.github.io/portfolio/posts/header.html");
-</script>
+  
 
 </head>
 <body>
@@ -281,7 +258,30 @@
 
     </div>
   </div>
+<script>
+    function readTextFile(file) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    console.log(allText);
+                    var header = document.getElementById("site_header");
+                    console.log('추출된 header: ' + header)
+                    console.log('추출된 html: ' + header[0].innerHTML)
+                    console.log('추출된 text: ' + header[0].innerText)
+                    header.appendChild(allText);
+                }
+            }
+        };
+        rawFile.send();
+    }
 
+    readTextFile("https://soonjongnim.github.io/portfolio/posts/header.html");
+</script>
   
 </body>
 
