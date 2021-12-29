@@ -79,13 +79,14 @@
                 {
                     var allText = rawFile.responseText;
                     console.log(allText);
+                    $("#site_header").html(allText);
                 }
             }
         };
         rawFile.send();
     }
 
-    readTextFile("https://soonjongnim.github.io/portfolio/posts/block_chain/post.html");
+    readTextFile("https://soonjongnim.github.io/portfolio/posts/header.html");
 </script>
 
 </head>
