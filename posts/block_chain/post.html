@@ -270,10 +270,11 @@
                     var allText = rawFile.responseText;
                     console.log(allText);
                     var header = document.getElementById("site_header");
-                    console.log('추출된 header: ' + header)
-                    console.log('추출된 html: ' + header[0].innerHTML)
-                    console.log('추출된 text: ' + header[0].innerText)
+                    console.log('추출된 header: ' + header);
+                    console.log('추출된 html: ' + header.innerHTML);
+                    console.log('추출된 text: ' + header.innerText);
                     header.appendChild(allText);
+                    $('#site_header').append(allText);
                 }
             }
         };
