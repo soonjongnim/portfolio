@@ -79,7 +79,8 @@
                 {
                     var allText = rawFile.responseText;
                     console.log(allText);
-                    $("#site_header").html(allText);
+                    var header = document.getElementById("site_header");
+                    header.appendChild(allText);
                 }
             }
         };
