@@ -6,29 +6,7 @@
   
 
 </head>
-<script>
-  function readTextFile(file) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", file, false);
-      rawFile.onreadystatechange = function () {
-          if(rawFile.readyState === 4)
-          {
-              if(rawFile.status === 200 || rawFile.status == 0)
-              {
-                  var allText = rawFile.responseText;
-                  console.log(allText);
-                  var header = document.getElementById("head_top");
-                  console.log('추출된 header: ' + header);
-                  console.log('추출된 html: ' + header.innerHTML);
-                  $('#head_top').append(allText);
-              }
-          }
-      };
-      rawFile.send();
-  }
 
-  readTextFile("https://soonjongnim.github.io/portfolio/posts/head_top.html");
-</script>
 <body>
   <!-- Animated Background -->
   <div class="lm-animated-bg" style="background-image: url(../../assets/img/main_bg.png);"></div>
@@ -155,6 +133,29 @@
 
     </div>
   </div>
+<script>
+  function readTextFile(file) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function () {
+          if(rawFile.readyState === 4)
+          {
+              if(rawFile.status === 200 || rawFile.status == 0)
+              {
+                  var allText = rawFile.responseText;
+                  console.log(allText);
+                  var header = document.getElementById("head_top");
+                  console.log('추출된 header: ' + header);
+                  console.log('추출된 html: ' + header.innerHTML);
+                  $('#head_top').append(allText);
+              }
+          }
+      };
+      rawFile.send();
+  }
+
+  readTextFile("https://soonjongnim.github.io/portfolio/posts/head_top.html");
+</script>
 <script>
   function readTextFile(file) {
       var rawFile = new XMLHttpRequest();
