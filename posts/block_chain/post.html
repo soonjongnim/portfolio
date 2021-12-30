@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="ko" class="no-js">
-<head id="head_top">
+<head>
   
   
 
@@ -144,7 +144,7 @@
               {
                   var allText = rawFile.responseText;
                   console.log(allText);
-                  var header = document.querySelector("head_top");
+                  var header = document.querySelector("head");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
                   header.prepend(allText);
