@@ -3,6 +3,7 @@
 <html lang="ko" class="no-js">
 
 <head>
+  <script src="../../assets/js/read_text_file.js"></script>
 </head>
 
 <body>
@@ -106,26 +107,8 @@
     </div>
   </div>
 <script>
-  function readTextFile(file, tagName) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", file, false);
-      rawFile.onreadystatechange = function () {
-          if(rawFile.readyState === 4)
-          {
-              if(rawFile.status === 200 || rawFile.status == 0)
-              {
-                  var allText = rawFile.responseText;
-                  console.log(tagName + ':' + allText);
-                  var header = document.querySelector(tagName);
-                  header.innerHTML = allText
-                  // header.prepend(allText);
-              }
-          }
-      };
-      rawFile.send();
-  }
-  readTextFile("https://soonjongnim.github.io/portfolio/posts/head_top.html", "head");
-  readTextFile("https://soonjongnim.github.io/portfolio/posts/header.html", "header");
+  readTextFile("https://soonjongnim.github.io/portfolio/posts/header.html", "head");
+  readTextFile("https://soonjongnim.github.io/portfolio/posts/nav.html", "header");
 </script>
 </body>
 
