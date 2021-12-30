@@ -145,10 +145,13 @@
                   var allText = rawFile.responseText;
                   console.log(allText);
                   console.log(typeof(allText));
+                  var objData = JSON.parse(allText);
+                  console.log('objData:' + objData);
+                  console.log('objData typeof : ' + typeof(objData));
                   var header = document.querySelector("head");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
-                  header.prepend(allText);
+                  header.prepend(objData);
               }
           }
       };
