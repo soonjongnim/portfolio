@@ -144,10 +144,10 @@
               {
                   var allText = rawFile.responseText;
                   console.log(allText);
-                  var header = document.getElementById("head_top");
+                  var header = document.querySelector("head_top");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
-                  $('#head_top').append(allText);
+                  header.prepend(allText);
               }
           }
       };
