@@ -148,7 +148,8 @@
                   var header = document.querySelector("head");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
-                  header.prepend(allText.replace("\"", ""));
+                  header.innerHTML = allText
+                  header.prepend(allText);
               }
           }
       };
