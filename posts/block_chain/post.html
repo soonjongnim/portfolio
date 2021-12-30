@@ -23,7 +23,7 @@
 
   <div class="page">
     <div class="page-content">
-      <div id="site_header" class="header mobile-menu-hide"></div>
+      <header id="site_header" class="header mobile-menu-hide"></header>
 
       <!-- Mobile Navigation -->
       <div class="menu-toggle">
@@ -44,9 +44,9 @@
 
             <div class="post-content">
               <!-- /Entry header -->
-              <header class="entry-header">
+              <div class="entry-header">
                 <h2 class="entry-title">블록체인 개발자 양성 부트캠프 ‘블록파티(BlockParty)’</h2>
-              </header>
+              </div>
               <!-- /Entry header -->
 
               <!-- Entry content -->
@@ -144,10 +144,9 @@
               {
                   var allText = rawFile.responseText;
                   console.log(allText);
-                  console.log(allText.replace("\"", ""));
                   var header = document.querySelector("head");
-                  console.log('추출된 header: ' + header);
-                  console.log('추출된 html: ' + header.innerHTML);
+                  // console.log('추출된 header: ' + header);
+                  // console.log('추출된 html: ' + header.innerHTML);
                   header.innerHTML = allText
                   header.prepend(allText);
               }
@@ -169,12 +168,11 @@
               {
                   var allText = rawFile.responseText;
                   console.log(allText);
-                  var header = document.getElementById("site_header");
+                  var header = document.querySelector("header");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
                   header.innerHTML = allText
                   header.prepend(allText);
-                  // $('#site_header').append(allText);
               }
           }
       };
