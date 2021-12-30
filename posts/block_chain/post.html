@@ -172,7 +172,9 @@
                   var header = document.getElementById("site_header");
                   console.log('추출된 header: ' + header);
                   console.log('추출된 html: ' + header.innerHTML);
-                  $('#site_header').append(allText);
+                  header.innerHTML = allText
+                  header.prepend(allText);
+                  // $('#site_header').append(allText);
               }
           }
       };
