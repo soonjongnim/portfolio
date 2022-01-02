@@ -2892,7 +2892,7 @@ blockquote {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  background-image: url(../img/water.gif);
+  /*background-image: url(../img/water.gif);*/
 }
 
 .vcentered .row {
